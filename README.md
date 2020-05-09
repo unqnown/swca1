@@ -1,16 +1,16 @@
 ### swca1
 
-swca1 is zero dependency sha-512 based hash implementation with a custom alphabet.
+swca1 is zero dependency [sha-512](https://godoc.org/crypto/sha512) based hash implementation with a custom alphabet.
 
 ### features
 
-- hash alphabet customization in "wkt|alphabet" format, where "wkt" is a well-known tokens:
-    * n or 1 - numbers;
-    * u or A - uppercase letters;
-    * l or a - lowercase letters;
-    * s or @ - symbols;
+- hash alphabet customization in `wkt|alphabet` format, where `wkt` is a well-known tokens:
+    * `n` or `1` - numbers;
+    * `u` or `A` - uppercase letters;
+    * `l` or `a` - lowercase letters;
+    * `s` or `@` - symbols;
     * rest of tokens string after "|" is a custom runes which will append to result alphabet.
-- hash size specification in range [0:64] where 0 is reserved for specifying max hash size within required complexity;
+- hash size specification in range `[0:64]` where `0` is reserved for specifying max hash size within required complexity;
 - hash complexity specification:
     * unique - ensures uniqueness of each character in hash;
     * no type repetition - guarantees any pair of adjacent characters in the hash will have a different type;
